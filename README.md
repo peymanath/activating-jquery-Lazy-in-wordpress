@@ -29,8 +29,8 @@ Refer to the site template `function.php` file and put the following code at the
 
 #### If you can access the file via CDN, use the following command.
 ```bash
+// Sample Two. Load the file on CDN Google
 function peymanseo_load_assets(){
-  // Sample Two. Load the file on CDN Google
   wp_register_script( 'JqueryNew.peymanseo' , 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, false);
   wp_enqueue_script( 'JqueryNew.peymanseo' );
 }
@@ -38,9 +38,8 @@ add_action('wp_enqueue_scripts', 'peymanseo_load_assets');
 ``` 
 #### If you want to call the file from your site, use the following command.
 ```bash
-  // An example of adding a jQuery file to the site header
+// Sample One. Load the file on your site
 function peymanseo_load_assets(){
-  // Sample One. Load the file on your site
   wp_register_script( 'JqueryNew.peymanseo' , 'https://domain.com/wp-content/themes/{name-theme}/assets/js/jquery.js', array(), null, false);
   wp_enqueue_script( 'JqueryNew.peymanseo' );
 }
